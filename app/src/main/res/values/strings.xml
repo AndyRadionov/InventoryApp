@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">InventoryApp</string>
+    <string name="action_add_product">Add Product</string>
+    <string name="editor_activity_title_new_pet">Add Product</string>
+    <string name="quantity">%spc.</string>
+</resources>

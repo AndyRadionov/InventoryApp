@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/item_background"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tv_product_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tv_product_name"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="18sp"
+        tools:text="Product LongLong Name" />
+
+    <TextView
+        android:id="@+id/tv_product_quantity"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        tools:text="25pc" />
+
+    <ImageButton
+        android:id="@+id/btn_product_sale"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/button_background"
+        android:src="@drawable/ic_action_sale" />
+
+    <ImageButton
+        android:id="@+id/btn_product_edit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/button_background"
+        android:src="@drawable/ic_action_edit" />
+
+
+</LinearLayout>
