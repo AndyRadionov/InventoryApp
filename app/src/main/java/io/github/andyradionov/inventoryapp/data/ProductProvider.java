@@ -31,13 +31,16 @@ import io.github.andyradionov.inventoryapp.data.ProductContract.ProductEntry;
  */
 public class ProductProvider extends ContentProvider {
 
-    /** Tag for the log messages */
-    public static final String LOG_TAG = ProductProvider.class.getSimpleName();
+    private static final String TAG = ProductProvider.class.getSimpleName();
 
-    /** URI matcher code for the content URI for the products table */
+    /**
+     * URI matcher code for the content URI for the products table
+     */
     private static final int PRODUCTS = 100;
 
-    /** URI matcher code for the content URI for a single product */
+    /**
+     * URI matcher code for the content URI for a single product
+     */
     private static final int PRODUCT_ID = 101;
 
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
@@ -71,7 +74,7 @@ public class ProductProvider extends ContentProvider {
                 break;
             case PRODUCT_ID:
                 selection = ProductEntry._ID + "=?";
-                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
 
                 cursor = database.query(ProductEntry.TABLE_NAME, projection, selection, selectionArgs,
                         null, null, sortOrder);
@@ -108,7 +111,7 @@ public class ProductProvider extends ContentProvider {
 
         long id = database.insert(ProductEntry.TABLE_NAME, null, values);
         if (id == -1) {
-            Log.e(LOG_TAG, "Failed to insert row for " + uri);
+            Log.e(TAG, "Failed to insert row for " + uri);
             return null;
         }
 
@@ -124,7 +127,7 @@ public class ProductProvider extends ContentProvider {
                 return updateProduct(uri, contentValues, selection, selectionArgs);
             case PRODUCT_ID:
                 selection = ProductEntry._ID + "=?";
-                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 return updateProduct(uri, contentValues, selection, selectionArgs);
             default:
                 throw new IllegalArgumentException("Update is not supported for " + uri);
@@ -164,7 +167,7 @@ public class ProductProvider extends ContentProvider {
                 return database.delete(ProductEntry.TABLE_NAME, selection, selectionArgs);
             case PRODUCT_ID:
                 selection = ProductEntry._ID + "=?";
-                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 return database.delete(ProductEntry.TABLE_NAME, selection, selectionArgs);
             default:
                 throw new IllegalArgumentException("Deletion is not supported for " + uri);

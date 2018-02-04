@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/lv_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.github.andyradionov.inventoryapp.MainActivity" />
+    tools:context="io.github.andyradionov.inventoryapp.MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_container_products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>
+

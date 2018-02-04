@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,16 +21,18 @@
         </activity>
         <activity
             android:name=".EditorActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/editor_activity_title_new_pet"
-            android:theme="@style/EditorTheme"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
         <provider
             android:name=".data.ProductProvider"
-            android:authorities="com.example.android.inventoryapp"
+            android:authorities="io.github.andyradionov.inventoryapp"
             android:exported="false" />
     </application>
 </manifest>

@@ -34,35 +34,18 @@ public final class ProductContract {
 
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_PRODUCTS);
 
-        /**
-         * The MIME type of the {@link #CONTENT_URI} for a list of products.
-         */
         public static final String CONTENT_LIST_TYPE =
                 ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_PRODUCTS;
 
-        /**
-         * The MIME type of the {@link #CONTENT_URI} for a single product.
-         */
         public static final String CONTENT_ITEM_TYPE =
                 ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_PRODUCTS;
 
-        /** Name of database table for products */
         public final static String TABLE_NAME = "products";
 
         public final static String _ID = BaseColumns._ID;
 
-        /**
-         * Name of the pet.
-         *
-         * Type: TEXT
-         */
-        public final static String COLUMN_PRODUCT_NAME ="name";
+        public final static String COLUMN_PRODUCT_NAME = "name";
 
-        /**
-         * Weight of the pet.
-         *
-         * Type: INTEGER
-         */
         public final static String COLUMN_PRODUCT_QUANTITY = "quantity";
     }
 

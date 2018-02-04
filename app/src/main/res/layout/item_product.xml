@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:background="@drawable/item_background"
+    android:background="@drawable/item_bg"
     android:orientation="horizontal"
     android:padding="8dp">
 
@@ -20,7 +20,6 @@
 
     <TextView
         android:id="@+id/tv_product_name"
-
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -32,7 +31,6 @@
 
     <TextView
         android:id="@+id/tv_product_quantity"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -47,7 +45,7 @@
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_marginRight="4dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/small_btn_bg"
         android:src="@drawable/ic_action_sale" />
 
     <ImageButton
@@ -56,8 +54,7 @@
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_marginRight="4dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/small_btn_bg"
         android:src="@drawable/ic_action_edit" />
-
 
 </LinearLayout>
